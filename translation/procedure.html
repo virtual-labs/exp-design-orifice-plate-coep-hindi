@@ -1,0 +1,437 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta content="" name="description">
+<meta content="" name="author">
+
+<meta name="experiment-short-name" content="design-orifice-plate">
+<meta name="developer-institute" content="coep">
+<meta name="learning-unit" content="DESIGN AN ORIFICE PLATE FOR A TYPICAL APPLICATION">
+<meta name="task-name" content="Procedure">
+
+<!-- For iPhone -->
+<meta name="msapplication-TileColor" content="#4076e0">
+<!-- Chrome, Firefox OS and Opera -->
+<meta name="theme-color" content="#4076e0">
+<!-- Windows Phone -->
+<meta name="msapplication-navbutton-color" content="#4076e0">
+<title>वर्चुअल लैब्स</title>
+<link rel="shortcut icon" href="./assets/images/favicon.ico">
+<link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/4.0.0/github-markdown.min.css" integrity="sha512-Oy18vBnbSJkXTndr2n6lDMO5NN31UljR8e/ICzVPrGpSud4Gkckb8yUpqhKuUNoE+o9gAb4O/rAxxw1ojyUVzg==" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans&amp;family=Raleway&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="./assets/css/github-markdown.min.css">
+<link rel="stylesheet" href="./assets/css/vlabs-style.css">
+
+<script src="./assets/js/jquery-3.4.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+<style>
+h1 {
+font-size: 1.8rem;
+}
+h2 {
+font-size: 1.4rem;
+}
+h3 {
+font-size: 1.2rem;
+}
+
+h2, h3 {
+font-weight: 800;
+}
+</style>
+</head>
+<body class="p-0 container-fluid vlabs-page d-flex flex-column justify-content-between">
+
+<header class="vlabs-header sticky-top bg-white">
+<nav class="p-0 navbar navbar-light d-flex align-items-stretch">
+
+<button class="navbar-toggler px-4" type="button" onclick="toggle()">
+<span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="d-flex justify-content-center">
+<a href="https://vlab.co.in" class="navbar-brand">
+<img src="./assets/images/vlabs-color-small-moe.jpg" alt="vlabs logo" class="vlabs-logo">
+</a>
+</div>
+
+<div id="headerNavbar" class="d-none border-top flex-grow-1 d-lg-flex align-items-center">
+<ul class="navbar-nav ml-auto text-center d-flex flex-md-row">
+<li class="nav-item px-2 m-1">
+<a href="https://vlab.co.in">होम</a>
+</li>
+<li class="nav-item px-2 m-1">
+<a href="https://vlab.co.in/participating-institutes">भागीदार</a>
+</li>
+<li class="nav-item px-2 m-1">
+<a href="https://vlab.co.in/contact-us">संपर्क</a>
+</li>
+</ul>
+</div>
+</nav>
+</header>
+<div class="container-fluid flex-fill d-flex flex-column vlabs-page-main">
+<div class="row d-flex justify-content-between">
+<div class="flex-column">
+
+<div class="row py-4 px-4 breadcrumbs">
+<a href="https://www.vlab.co.in/broad-area-electrical-engineering">
+इलेक्ट्रिकल इंजीनियरिंग
+</a>
+<span class="mx-2">
+<i aria-hidden="true" class="fa fa-angle-right"></i>
+</span>
+<a href="https://sl-coep.vlabs.ac.in">
+सेंसर्स मॉडलिंग और सिमुलेशन लैब
+</a>
+<span class="mx-2">
+<i aria-hidden="true" class="fa fa-angle-right"></i>
+</span>
+<a href="https://sl-coep.vlabs.ac.in/List of experiments.html">
+प्रयोग
+</a>
+</div>
+
+</div>
+<div class="flex-column">
+<div id="plugin-bug-report"></div>
+<div id="plugin-rating"></div>
+</div>
+</div>
+<div class="row flex-grow-1 d-flex flex-nowrap flex-column flex-lg-row">
+<div class="modal fade popupmenu" id="popupMenu" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title" id="exampleModalLabel">
+<a href="https://vlab.co.in" class="navbar-brand">
+<img src="./assets/images/vlabs-color-small-moe.jpg" alt="vlabs logo" class="vlabs-logo">
+</a>
+</h5>
+<button type="button" class="btn-close align-self-center" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+<div class="modal-body nav-menu">
+<div>
+<div class="d-flex nav-menu-body">
+<a href="index.html" class="p-2 ">
+उद्देश्य
+</a>
+
+</div>
+<div id="t-" class="collapse">
+<div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+</div>
+</div>
+</div>
+<div>
+<div class="d-flex nav-menu-body">
+<a href="theory.html" class="p-2 ">
+सिद्धांत
+</a>
+
+</div>
+<div id="t-" class="collapse">
+<div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+</div>
+</div>
+</div>
+<div>
+<div class="d-flex nav-menu-body">
+<a href="pretest.html" class="p-2 ">
+प्रीटेस्ट
+</a>
+
+</div>
+<div id="t-" class="collapse">
+<div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+</div>
+</div>
+</div>
+<div>
+<div class="d-flex nav-menu-body">
+<a href="procedure.html" class="p-2  current-item ">
+कार्यप्रणाली
+</a>
+
+</div>
+<div id="t-" class="collapse">
+<div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+</div>
+</div>
+</div>
+<div>
+<div class="d-flex nav-menu-body">
+<a href="simulation.html" class="p-2 ">
+सिमुलेशन
+</a>
+
+</div>
+<div id="t-" class="collapse">
+<div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+</div>
+</div>
+</div>
+<div>
+<div class="d-flex nav-menu-body">
+<a href="posttest.html" class="p-2 ">
+पोस्टटेस्ट
+</a>
+
+</div>
+<div id="t-" class="collapse">
+<div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+</div>
+</div>
+</div>
+<div>
+<div class="d-flex nav-menu-body">
+<a href="references.html" class="p-2 ">
+सन्दर्भ
+</a>
+
+</div>
+<div id="t-" class="collapse">
+<div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+</div>
+</div>
+</div>
+<div>
+<div class="d-flex nav-menu-body">
+<a href="feedback.html" class="p-2 ">
+प्रतिपुष्टि
+</a>
+
+</div>
+<div id="t-" class="collapse">
+<div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="nav flex-column sidebar nav-menu flex-shrink-0 px-lg-4 align-items-center align-items-lg-start hidden d-none d-lg-flex" id="menu">
+<div>
+<div class="d-flex nav-menu-body">
+<a href="index.html" class="p-2 ">
+उद्देश्य
+</a>
+
+</div>
+<div id="t-" class="collapse">
+<div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+</div>
+</div>
+</div>
+<div>
+<div class="d-flex nav-menu-body">
+<a href="theory.html" class="p-2 ">
+सिद्धांत
+</a>
+
+</div>
+<div id="t-" class="collapse">
+<div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+</div>
+</div>
+</div>
+<div>
+<div class="d-flex nav-menu-body">
+<a href="pretest.html" class="p-2 ">
+प्रीटेस्ट
+</a>
+
+</div>
+<div id="t-" class="collapse">
+<div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+</div>
+</div>
+</div>
+<div>
+<div class="d-flex nav-menu-body">
+<a href="procedure.html" class="p-2  current-item ">
+कार्यप्रणाली
+</a>
+
+</div>
+<div id="t-" class="collapse">
+<div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+</div>
+</div>
+</div>
+<div>
+<div class="d-flex nav-menu-body">
+<a href="simulation.html" class="p-2 ">
+सिमुलेशन
+</a>
+
+</div>
+<div id="t-" class="collapse">
+<div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+</div>
+</div>
+</div>
+<div>
+<div class="d-flex nav-menu-body">
+<a href="posttest.html" class="p-2 ">
+पोस्टटेस्ट
+</a>
+
+</div>
+<div id="t-" class="collapse">
+<div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+</div>
+</div>
+</div>
+<div>
+<div class="d-flex nav-menu-body">
+<a href="references.html" class="p-2 ">
+सन्दर्भ
+</a>
+
+</div>
+<div id="t-" class="collapse">
+<div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+</div>
+</div>
+</div>
+<div>
+<div class="d-flex nav-menu-body">
+<a href="feedback.html" class="p-2 ">
+प्रतिपुष्टि
+</a>
+
+</div>
+<div id="t-" class="collapse">
+<div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+</div>
+</div>
+</div>
+</div>          <div class="vlabs-page-content px-5 pb-4 flex-grow-1 markdown-body">
+<div class="text-center fix-spacing">
+<h3 id="design-an-orifice-plate-for-a-typical-application">एक प्रतीकात्मक अनुप्रयोग के लिए ओरिफिस प्लेट डिजाइन करें</h3>
+
+</div>
+<h2 id="procedure">कार्यप्रणाली</h2>
+<h3 id="the-procedure-for-using-simulator-is-as-follows"><strong>सिम्युलेटर का उपयोग करने की प्रक्रिया इस प्रकार है:</strong></h3>
+<h3 id="expt-1-measurement-of-differential-pressure"><strong>प्रयोग 1: डिफरेंशियल प्रेशर का माप</strong></h3>
+<h3 id="aim-to-study-the-measurement-of-the-differential-pressure-due-to-change-in-flow"><strong>उद्देश्य:</strong> प्रवाह में परिवर्तन के कारण डिफरेंशियल प्रेशर के माप का अध्ययन करना।</h3>
+<h4 id="step-by-step-procedure"><strong>क्रमवार कार्यप्रणाली:</strong></h4>
+<h5 id="1-study-the-diagram-completely">1. Sआरेख का पूरी तरह से अध्ययन करें।</h5>
+<h5 id="2-select-the-value-of-beta-ratio-">2. बीटा रेश्यो (β) के मूल्य का चयन करें।</h5>
+<h5 id="3-select-the-value-of-orifice-diameter-d-in-meter">3. मीटर में ओरिफिस डाएमटीर (d) के मूल्य का चयन करें।</h5>
+<h5 id="4-click-on-done-this-will-lock-the-values-of-----and-d">4. Done पर क्लिक करें।  यह β और d के मूल्यों को लॉक कर देगा।</h5>
+<h5 id="5-change-the-value-of-volumetric-flow-rate-in-lpm-q-by-a-cursor">5. एक कर्सर द्वारा LPM (Q) में वोल्यूमेट्रिक फ्लो रेट का मूल्य बदलें।</h5>
+<h5 id="6-click-on-show-cd-tab-the-coefficient-of-discharge-will-be-displayed">6. Show Cd टैब पर क्लिक करें। कोफीशिएंट ऑफ़ डिस्चार्ज प्रदर्शित होगा।</h5>
+<h5 id="7-enter-the-calculated-user-output-differential-pressure-for-calculations-of-differential-pressure-p-click-on-get-formula-tab">7. यूजर, गणना किये हुए आउटपुट डिफरेंशियल प्रेशर को दर्ज करें।  डिफरेंशियल प्रेशर ?P की गणना के लिए  Get Formula टैब पर क्लिक करें।</h5>
+<h5 id="8-using-formula-calculate-the-value-of-the-differential-pressure-and-enter-the-answer-in-the-box-provided-submit-the-answer-using-submit-button">8. सूत्र का उपयोग करके डिफरेंशियल प्रेशर  के मूल्य की गणना करें और प्रदान किए गए बॉक्स में उत्तर दर्ज करें। Submit बटन का उपयोग करके उत्तर जमा करें।</h5>
+<h5 id="9-if-your-calculation-is-correct-the-differential-pressure-will-be-displayed-on-screen-change-the-value-of-q-and-repeat-the-steps-5-to-8">9. यदि आपकी गणना सही है तो स्क्रीन पर डिफरेंशियल प्रेशर प्रदर्शित होगा। Q का मूल्य बदलें और चरण 5 से 8 दोहराएं।</h5>
+<h5 id="10-minimum-six-calculations-are-necessary-to-plot-the-graph-and-after-six-calculations-the-plot-tab-will-be-activated">10. ग्राफ को प्लॉट करने के लिए न्यूनतम छह गणनाएं आवश्यक हैं, और छह गणनाओं के बाद Plot टैब सक्रिय हो जाएगा।</h5>
+<h5 id="11-click-on-plot-to-see-the-graph-study-the-graph-of-differential-pressure-variation-when-flow-rate-is-changed">11. ग्राफ देखने के लिए Plot पर क्लिक करें। फ्लो रेट दर बदलने पर डिफरेंशियल प्रेशर वेरिएशन के ग्राफ का अध्ययन करें।</h5>
+<h5 id="12-hide-the-graph-and-switch-to-the-next-experiment">12. ग्राफ छिपाएँ और अगले प्रयोग पर स्विच करें।</h5>
+<h3 id="expt-2-effect-of-change-in-service-on-flow-measurement">प्रयोग 2: प्रवाह माप पर सर्विस में परिवर्तन का प्रभाव।</h3>
+<h3 id="aim-study-the-effect-of-service-change-on-the-measurement-of-differential-pressure"><strong>उद्देश्य</strong>: डिफरेंशियल प्रेशर  के माप पर सर्विस परिवर्तन के प्रभाव का अध्ययन करना।</h3>
+<h4 id="in-this-experiment-by-using-the-formula-one-can-change-the-type-of-the-service-and-calculate-the-change-in-differential-pressure">इस प्रयोग में, फार्मूला का उपयोग करके सर्विस के प्रकार को बदल सकते हैं और डिफरेंशियल प्रेशर  में परिवर्तन की गणना कर सकते हैं।</h4>
+<h3 id="step-by-step-procedure-1">क्रमवार कार्यप्रणाली:</h3>
+<h5 id="1-study-the-diagram-completely-1">1. आरेख का पूरी तरह से अध्ययन करें।</h5>
+<h5 id="2-select-the-service-according-to-change-in-service-the-density-will-change-and-value-if-the-density-will-be-displayed-on-the-screen">2. सर्विस का चयन करें। सर्विस में परिवर्तन के अनुसार घनत्व बदल जाएगा और घनत्व का मूल्य स्क्रीन पर प्रदर्शित होगा।</h5>
+<h5 id="3-select-the-value-of-beta-ratio-">3. बीटा रेश्यो (β) के मूल्य का चयन करें।</h5>
+<h5 id="4-select-the-value-of-orifice-diameter-d-in-meter">4. मीटर में ओरिफिस डाएमटीर (d) के मूल्य का चयन करें।</h5>
+<h5 id="5-click-on-done-this-will-lock-the-values-of--and-d">5. Done  पर क्लिक करें।  यह β और d के मूल्यों को लॉक कर देगा।</h5>
+<h5 id="6-change-the-value-of-volumetric-flow-rate-in-lpm-q-by-a-cursor">6. कर्सर द्वारा LPM (Q) में वोल्यूमेट्रिक फ्लो रेट का मूल्य बदलें।</h5>
+<h5 id="7-click-on-show-cd-tab-the-coefficient-of-discharge-will-be-displayed">7. Show Cd टैब पर क्लिक करें। कोफिशिएंट ऑफ़ डिस्चार्ज प्रदर्शित होगा।</h5>
+<h5 id="8-enter-the-calculated-user-output-differential-pressure-for-calculations-of-differential-pressure-p-click-on-get-formula-tab">8. यूजर, गणना किये हुए आउटपुट डिफरेंशियल प्रेशर को दर्ज करें। डिफरेंशियल प्रेशर  ?P की गणना के लिए Get Formula टैब पर क्लिक करें।</h5>
+<h5 id="9-using-formula-calculate-the-value-of-the-differential-pressure-and-enter-the-answer-in-the-box-provided-submit-the-answer-using-submit-button">9. सूत्र का उपयोग करके डिफरेंशियल प्रेशर के मूल्य की गणना करें और प्रदान किए गए बॉक्स में उत्तर दर्ज करें। Submit बटन का उपयोग करके उत्तर जमा करें।</h5>
+<h5 id="10--if-your-calculation-is-correct-the-differential-pressure-will-be-displayed-on-screen-change-the-value-of-q-and-repeat-the-steps-6-to-9">10.  यदि आपकी गणना सही है तो स्क्रीन पर डिफरेंशियल प्रेशर प्रदर्शित होगा। Q का मूल्य बदलें और चरण 6 से 9 दोहराएं।</h5>
+<h5 id="11--minimum-six-calculations-are-necessary-to-plot-the-graph-and-after-six-calculations-the-plot-tab-will-be-activated">11.  ग्राफ को प्लॉट करने के लिए न्यूनतम छह गणनाएं आवश्यक हैं और छह गणनाओं के बाद Plot टैब सक्रिय हो जाएगा।</h5>
+<h5 id="12--click-on-plot-to-see-the-graph-study-the-graph-of-differential-pressure-variation-when-flow-rate-is-changed">12.  ग्राफ देखने के लिए Plot पर क्लिक करें। फ्लो रेट बदलने पर डिफरेंशियल प्रेशर वेरिएशन के ग्राफ का अध्ययन करें।</h5>
+<h5 id="13--hide-the-graph-and-switch-to-the-next-experiment">13.  ग्राफ छिपाएँ और अगले प्रयोग पर स्विच करें।</h5>
+<h3 id="expt-3-effect-of-tapping-on-flow-measurement">प्रयोग 3: फ्लो मेज़रमेंट पर टैपिंग का प्रभाव।</h3>
+<h3 id="aim-study-the-effect-of-service-change-on-the-measurement-of-differential-pressure-1"><strong>उद्देश्य:</strong> डिफरेंशियल प्रेशर के माप पर सर्विस परिवर्तन के प्रभाव का अध्ययन करें।</h3>
+<h4 id="in-this-experiment-by-using-the-formula-one-can-change-the-type-of-the-service-and-calculate-the-change-in-differential-pressure-1">इस प्रयोग में फार्मूला का उपयोग करके सर्विस के प्रकार को बदल सकते हैं, और डिफरेंशियल प्रेशर में परिवर्तन की गणना कर सकते हैं।</h4>
+<h3 id="step-by-step-procedure-2">क्रमवार कार्यप्रणाली:</h3>
+<h5 id="1-study-the-diagram-completely-2">1. आरेख का पूरी तरह से अध्ययन करें।</h5>
+<h5 id="2-select-the-tapping-for-the-orifice-meter">2. ओरिफिस मीटर के लिए टैपिंग का चयन करें।</h5>
+<h5 id="3-select-the-service-according-to-change-in-service-selected-tapping-will-be-displayed-on-the-screen">3. सर्विस का चयन करें। सर्विस में परिवर्तन के अनुसार चयनित टैपिंग स्क्रीन पर प्रदर्शित होगा।</h5>
+<h5 id="4-select-the-value-of-beta-ratio-">4. बीटा रेश्यो (β) के मूल्य का चयन करें।</h5>
+<h5 id="5-select-the-value-of-orifice-diameter-d-in-meter">5. मीटर में ओरिफिस डाएमटीर (d) के मूल्य का चयन करें।</h5>
+<h5 id="6-click-on-done-this-will-lock-the-values-of--and-d">6. Done पर क्लिक करें।  यह β और d के मूल्यों को लॉक कर देगा।</h5>
+<h5 id="7-change-the-value-of-volumetric-flow-rate-in-lpm-q-by-a-cursor">7. कर्सर द्वारा LPM (Q) में वोल्यूमेट्रिक फ्लो रेट का मूल्य बदलें।</h5>
+<h5 id="8-click-on-show-cd-tab-the-coefficient-of-discharge-will-be-displayed">8. Show Cd टैब पर क्लिक करें। कोफिशिएंट ऑफ़ डिस्चार्ज प्रदर्शित होगा।</h5>
+<h5 id="9-enter-the-calculated-user-output-differential-pressure-for-calculations-of-differential-pressure-p-click-on-get-formula-tab">9. यूजर, गणना किये हुए आउटपुट डिफरेंशियल प्रेशर को दर्ज करें। डिफरेंशियल प्रेशर ?P की गणना के लिए Get Formula टैब पर क्लिक करें।</h5>
+<h5 id="10-using-formula-calculate-the-value-of-the-differential-pressure-and-enter-the-answer-in-the-box-provided-submit-the-answer-using-submit-button">10. सूत्र का उपयोग करके डिफरेंशियल प्रेशर के मूल्य की गणना करें और प्रदान किए गए बॉक्स में उत्तर दर्ज करें। Submit बटन का उपयोग करके उत्तर जमा करें।</h5>
+<h5 id="11-if-your-calculation-is-correct-the-differential-pressure-will-be-displayed-on-screen-change-the-value-of-q-and-repeat-the-steps-7-to-10">11. यदि आपकी गणना सही है तो स्क्रीन पर डिफरेंशियल प्रेशर प्रदर्शित होगा। Q का मूल्य बदलें और चरण 7 से 10 दोहराएं।</h5>
+<h5 id="12-minimum-six-calculations-are-necessary-to-plot-the-graph-and-after-six-calculations-the-plot-tab-will-be-activated">12. ग्राफ को प्लॉट करने के लिए न्यूनतम छह गणनाएं आवश्यक हैं और छह गणनाओं के बाद Plot टैब सक्रिय हो जाएगा।</h5>
+<h5 id="13-click-on-plot-to-see-the-graph-study-the-graph-of-differential-pressure-variation-when-flow-rate-is-changed">13. ग्राफ देखने के लिए Plot पर क्लिक करें। फ्लो रेट  बदलने पर डिफरेंशियल प्रेशर वेरिएशन के ग्राफ का अध्ययन करें।</h5>
+<h5 id="14-hide-the-graph-and-switch-to-the-next-experiment">14. ग्राफ छिपाएँ और अगले प्रयोग पर स्विच करें।</h5>
+<h3 id="expt-4-effect-of-temperature-and-pressure-on-flow-measurement">प्रयोग 4: प्रवाह माप पर  तापमान और दबाव का प्रभाव।</h3>
+<h3 id="aim-study-the-effect-of-change-in-temperature-and-pressure-on-the-measurement-of-flow"><strong>उद्देश्य:</strong> प्रवाह के माप पर तापमान और दबाव में परिवर्तन के प्रभाव का अध्ययन करें।</h3>
+<h4 id="in-this-experiment-by-using-the-formula-one-can-change-the-value-of-temperature-and-observe-the-effect-on-change-in-differential-pressure">इस प्रयोग में, फार्मूला का उपयोग करके तापमान का मूल्य बदला जा सकता है और डिफरेंशियल प्रेशर में परिवर्तन के प्रभाव का निरीक्षण किया जा सकता है।</h4>
+<h3 id="step-by-step-procedure-3">क्रमवार कार्यप्रणाली:</h3>
+<h5 id="1-study-the-diagram-completely-3">1. आरेख का पूरी तरह से अध्ययन करें।</h5>
+<h5 id="2-select-the-service-the-selected-service-will-be-displayed-on-the-screen">2. सर्विस का चयन करें।  चयनित सर्विस स्क्रीन पर प्रदर्शित होगी।</h5>
+<h5 id="3-select-the-value-of-temperature">3. तापमान के मूल्य का चयन करें।.</h5>
+<h5 id="4-select-the-value-of-beta-ratio--1">4. बीटा रेश्यो (β) के मूल्य का चयन करें।</h5>
+<h5 id="5-select-the-value-of-orifice-diameter-d-in-meter-1">5. मीटर में ओरिफिस डाएमटीर (d) के मूल्य का चयन करें।</h5>
+<h5 id="6-click-on-done-this-will-lock-the-values-of--and-d-1">6. Done पर क्लिक करें। यह β और d के मूल्यों को लॉक कर देगा।</h5>
+<h5 id="7-change-the-value-of-volumetric-flow-rate-in-lpm-q-by-a-cursor-1">7. कर्सर द्वारा LPM (Q) में वोल्यूमेट्रिक फ्लो रेट का मूल्य बदलें।</h5>
+<h5 id="8-click-on-show-cd-tab-the-coefficient-of-discharge-will-be-displayed-1">8. Show Cd टैब पर क्लिक करें। कोफिशिएंट ऑफ़ डिस्चार्ज प्रदर्शित होगा।</h5>
+<h5 id="9-enter-the-calculated-user-output-differential-pressure-for-calculations-of-differential-pressure-p-click-on-get-formula-tab-1">9. यूजर, गणना किये हुए आउटपुट डिफरेंशियल प्रेशर को दर्ज करें। डिफरेंशियल प्रेशर ?P की गणना के लिए Get Formula टैब पर क्लिक करें।</h5>
+<h5 id="10-using-formula-calculate-the-value-of-the-differential-pressure-and-enter-the-answer-in-the-box-provided-enter-all-digits-submit-the-answer-using-submit-button">10. सूत्र का उपयोग करके डिफरेंशियल प्रेशर के मूल्य की गणना करें और प्रदान किए गए बॉक्स में उत्तर दर्ज करें (सभी अंक दर्ज़ करें)। Submit बटन का उपयोग करके उत्तर जमा करें।</h5>
+<h5 id="11-if-your-calculation-is-correct-the-differential-pressure-will-be-displayed-on-screen-change-the-value-of-q-and-repeat-the-steps-7-to-10-1">11. यदि आपकी गणना सही है तो स्क्रीन पर डिफरेंशियल प्रेशर प्रदर्शित होगा। Q का मूल्य बदलें और चरण 7 से 10 दोहराएं।</h5>
+<h5 id="12-minimum-three-calculations-are-necessary-to-plot-the-graph-and-after-three-calculations-the-plot-tab-will-be-activated">12. ग्राफ को प्लॉट करने के लिए न्यूनतम तीन गणनाएं आवश्यक हैं और तीन गणनाओं के बाद Plot टैब सक्रिय हो जाएगा।</h5>
+<h5 id="13-click-on-plot-to-see-the-graph-study-the-graph-of-differential-pressure-variation-when-flow-rate-is-changed-1">13. ग्राफ देखने के लिए Plot पर क्लिक करें। फ्लो रेट बदलने पर डिफरेंशियल प्रेशर वेरिएशन के ग्राफ का अध्ययन करें।</h5>
+<h5 id="14-hide-the-graph-and-switch-to-the-next-part-of-the-experiment">14. ग्राफ छिपाएँ और प्रयोग के अगले भाग पर स्विच करें।</h5>
+<h4 id="after-completion-of-both-the-parts-you-can-proceed-to-post-test-to-find-out-if-you-have-understood-all-aspects-of-the-experiment">दोनों भागों के पूरा होने के बाद, क्या आपने प्रयोग के सभी पहलुओं को समझा है, यह पता लगाने के लिए आप पोस्ट टेस्ट की ओर आगे बढ़ सकते हैं।</h4>
+
+</div>
+</div>
+</div>
+<footer class="text-light pt-2 vlabs-footer d-flex flex-column">
+<div class="row px-5 mx-0">
+<div class="col d-flex flex-column">
+<span class="font-weight-bold vlabs-footer-sect-name pb-2 mb-3">कम्युनिटी लिंक्स</span>
+<a href="https://www.sakshat.ac.in/" class="text-light">साक्षात पोर्टल</a>
+<a href="http://outreach.vlabs.ac.in/" class="text-light">आउटरीच पोर्टल</a>
+<a href="https://vlab.co.in/faq" class="text-light">FAQ: वर्चुअल लैब्स</a>
+</div>
+<div class="col d-flex flex-column">
+<span class="font-weight-bold vlabs-footer-sect-name pb-2 mb-3">हमसे संपर्क करें</span>
+<span> फोन: सामान्य जानकारी: 011-26582050 </span>
+<span> ईमेल: support@vlabs.ac.in </span>
+</div>
+<div class="col d-flex flex-column">
+<span class="font-weight-bold vlabs-footer-sect-name pb-2 mb-3">हमारा अनुसरण करें</span>
+<div class="social-links">
+<a class="p-2 mt-1 mr-2 d-inline-flex justify-content-center align-items-center" style="background: #55acee;" href="https://twitter.com/TheVirtualLabs">
+<i class="fa fa-twitter"></i>
+</a>
+<a class="p-2 mt-1 mr-2 d-inline-flex justify-content-center align-items-center" style="background: #3b5998;" href="https://www.facebook.com/Virtual-Labs-IIT-Delhi-301510159983871/">
+<i class="fa fa-facebook"></i>
+</a>
+<a class="p-2 mt-1 mr-2 d-inline-flex justify-content-center align-items-center" style="background: #e52d27;" href="https://www.youtube.com/watch?v=asxRaOgk6a0">
+<i class="fa fa-youtube"></i>
+</a>
+<a class="p-2 mt-1 mr-2 d-inline-flex justify-content-center align-items-center" style="background: #2867B2;" href="https://in.linkedin.com/in/virtual-labs-008ba9136">
+<i class="fa fa-linkedin"></i>
+</a>
+</div>
+</div>
+</div>
+<div class="m-0 py-2 text-center" style="font-family: &quot;Open Sans&quot;, sans-serif; background: #212121;">
+<a class="text-primary font-weight-bold" href="https://www.gnu.org/licenses/agpl-3.0.en.html"> AGPL 3.0 </a>
+&nbsp;&amp;&nbsp;
+<a class="text-primary font-weight-bold" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"> क्रिएटिव कॉमन्स (CC BY-NC-SA 4.0) </a>
+</div>
+</footer>
+
+<script src="./assets/js/toggleSidebar.js"></script>
+
+
+
+</body></html>
